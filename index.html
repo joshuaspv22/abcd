@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="keywords" content="Kanlungan, Miskonasia" />
+    <meta name="description" content= "Kanlungan is a safe space 'shelter' dedicated for people who might be lost in their pathway of life. Adorned in charming digital artwork and led by the fictional shapeshifting cat, Miskonasia, the website holds several little ephemeras in the daily — helpful quotes for the day with an originally written poem in the side, a post-it note station as fleeting as you allow it to be, and a bit of an 'achievements' section dictated by the amount of days you log in." />
+    <meta name="author" content="ESQUIVEL, Elisha Marie, VILLASFER, Joshua Samuel" />
+    <meta name="revised" content="12/20/2024" /> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy_of_welcome-cat-removebg-preview.png?v=1734700678605">
+    <title>Kanlungan</title>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen" onclick="dismissLoadingScreen()"> / <!--For loading screen initiation -->
+    <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/jk.jpg?v=1734787093397" alt="Loading"> <!--For loading screen image -->
+</div> 
+
+<div class="confirmation-dialog" id="confirmationDialog"> <!--For after loading screen option initiation -->
+    <div class="dialog-content"> <!--For after loading screen option content -->
+        <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20welcome-cat.png?v=1734696554962" alt="Pusa of the Eons"> <!--For option image -->
+        <p>BEEHOLD! i am the pusa of the eons, Miskonasia! dare you enter the shelter: the Kalungan?</p> <!--For option text -->
+        <div class="dialog-buttons"> <!--For option dialogs -->
+            <button class="dialog-button" onclick="enterSite()">yup g</button> <!--For 1st dialog -->
+            <button class="dialog-button" onclick="enterSite()">yes!!!!</button> <!--For 2nd dialog -->
+        </div>
+    </div>
+</div>
+
+<div class="content-wrapper"> <!--For header -->
+    <div class="navbar"> <!--For header navbar -->
+        <span id="current-date"></span> <!--For date in header navbar -->
+        <span class="tab-link" onclick="showContent('kanlungan')">kanlungan.</span> <!--For direction to homepage option in header navbar -->
+        <span id="days-accessed">days accessed: [0/30]</span> <!--For days accessed in header navbar (it changes per day you enter the website)-->
+    </div>
+
+    <div class="tabs">
+        <span class="tab-link" onclick="showContent('quote')">✹ quote page.</span> <!--For quote option in lower navbar -->
+        <span class="separator"></span>
+        <span class="tab-link" onclick="showContent('title')">✹ post-it.</span> <!--For post-it option in lower navbar -->
+        <span class="separator"></span>
+        <span class="tab-link" onclick="showContent('about')">✹ mini games.</span> <!--For mini games option in lower navbar -->
+    </div>
+
+    <div id="content-kanlungan" class="content-section"> <!--For homepage content -->
+        <div class="kanlungan-container"> <!--For left-side bar content -->
+            <div class="text-column">               
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="tab-link" onclick="showContent('socials')"><a href="#">socials page</a></p> <!--For socials content -->
+                <p class="tab-link" onclick="showContent('sources')"><a href="#">sources page</a></p> <!--For sources content -->
+                <p class="tab-link" onclick="showContent('copyright')"><a href="#">copyright page</a></p> <!--For copyright content -->
+            </div>
+            <div class="image-column"> <!--For center content -->
+                <h1>KANLUNGAN</h1> <!--For center title content -->
+                <img src= "https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20kalungnan.png?v=1734696454122" alt="Miskonasian Character"> <!--For center image content -->
+            </div>
+            <div class="text-column"> <!--For right-side bar content -->
+              <p>
+                <a href="#">about this.</a> <!--For about this indicator content -->
+              </p>
+                <p>kanlungan is a safe space "shelter" dedicated for people who might be lost in their pathway of life. adorned in charming digital artwork and led by the fictional shapeshifting cat, Miskonasia, the website holds several little ephemeras in the daily — helpful quotes for the day with an originally written poem in the side, a post-it note station as fleeting as you allow it to be, and a bit of an "achievements" section dictated by the amount of days you log in.</p> <!--For about this content -->
+            </div>
+        </div>
+    </div>
+
+    <div id="content-quote" class="content-section active-content"> <!--For quote webpage content -->
+        <div id="last-accessed" class="date-info"></div> <!--For last-access date content -->
+        <div class="content-header"> <!--For title bar content -->
+            <img src= "https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20indicator.png?v=1734785790323" alt="Decorative Icon" class="header-icon"> <!--For title icon content -->
+            <div>
+                <h2>pace your allusions.</h2> <!--For title content -->
+                   <p class="subtitle">perhaps a flick of a coin cannot pave your fate; destiny is an ink of your quill. though so, a word of advice by the daylight surely would suffice to taint your life’s magnum opus of a canvas a bit more iridescent in colour. Miskonasia drops by on the daily with love letters of the heart spurred alike a warm cup of cocoa.</p> <!--For description content -->
+                <div class="description">
+                   <p>(a page where you receive a quote every day with a sprinkle of a short poem. come back the next, and maybe you’ll get a little sweet treat of an award once on specific dates...)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content"> <!--For main webpage content -->
+        <div class="quote" id="daily-quote"></div> <!--For daily quote content -->
+        <div class="poem"> <!--For poem content -->
+            showers of rain may grace the roots of where one flourished upon the golden star, but to never feel the glint of it roll down your cheek, to not have known who the sun rises for are the elysian fields in a gilded cage. <!--For poem content -->
+        </div>
+            <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20quote-cat.png?v=1734696551594" alt="Art" class="image"> <!--For quote page art content -->
+        </div>
+        <div class="credits">art, poems, and lore creds to elisha e.</div> <!--For credit content -->
+    </div>
+
+    <div id="content-title" class="content-section"> <!--For post-it webpage content -->
+        <div class="content-header">
+            <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20icon.png?v=1734696446049" alt="Decorative Icon" class="header-icon"> <!--For post it webpage icon content -->
+            <div>
+                <h2>carve your epithet.</h2> <!--For title content -->
+                   <p class="subtitle">do you yearn to speak aloud of the swooping thoughts of your affinities? perhaps the will of brevity sews your lips into silence — the childish fluster of musing such encomiums even towards the mirror a sight and sound unheard of to you. Miskonasia’s space allows of the love that cannot be named: from a hallway limerence to a simple adoration towards a vitruvian figure you dare not approach.</p> <!--For webpage description content -->
+                <div class="description">
+                   <p>(a safe space to compliment people either you’re close with or you’ve seen casually when you can’t do it because you’re too shy: completely anonymous. the message will only stay there until you refresh.)</p>
+                </div>
+            </div>    
+        </div>
+
+    <div class="guestbook"> <!--For messages initialization content -->
+        <div class="board-container"> 
+            <div class="messages" id="messages-board"></div>
+            <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20message-cat.png?v=1734696503048" alt="Art" class="image">
+        </div>
+
+        <div class="form"> <!--For messages content (user-input content) -->
+            <input type="text" id="guest-name" placeholder="Your Name" required>
+            <textarea id="guest-message" placeholder="Your Message" rows="3" required></textarea>
+            <button type="button" onclick="addMessage()">Submit Message</button>
+            </div>
+      </div>
+        <div class="credits">art, poems, lore creds to elisha e.</div> <!--For credit content -->
+    </div>
+
+    <div id="content-about" class="content-section"> <!--For mini-games content -->
+        <div class="content-header">
+            <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20icon.png?v=1734696446049" alt="Decorative Icon" class="header-icon">
+            <div>
+                <h2>mold your play.</h2> <!--For mini games description content -->
+                  <p class="subtitle">it is no clandestine an enigma to be held under lock and key the depth of dedication to wreathe such a safe space with letterings of your reflection’s virtuoso. as such, if you’ll allow, Miskonasia would hesitate no less to pull the curtains before the begetters of the Kanlungan for a moment’s relief.</p>
+                <div class="description">
+                  <p>(a mini-game to be played.)</p>
+                </div>
+            </div>
+        </div>
+        <div class="tetris-container"> <!--For tetris game container content -->
+            <div class="tetris-title"> <!--For tetris game title content -->
+                <h3>tetris</h3>
+                <div>score: <span id="score">0</span></div> <!--For tetris game score content -->
+                <button id="resetButton" onclick="resetTetris()">reset</button>
+            </div>
+            <div class="tetris-game"> <!--For tetris game content -->
+              <div class="tetris-board">
+                 <canvas id="tetrisCanvas" width="240" height="400"></canvas> <!--For tetris game canva content -->
+                 <canvas id="nextPieceCanvas" width="120" height="120"></canvas>
+              </div>
+            </div>
+            <div class="tetris-instructions"> <!--For tetris game intstructions content -->
+                <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20game-cat.png?v=1734696440744" alt="Art" class="image">
+                <p>
+                  <b>instructions:</b>
+                </p>
+                <ul>
+                   <li>use the left and right arrow keys to move pieces</li>
+                    <li>press Q and W to rotate</li>
+                    <li>use the down arrow key to drop faster</li>
+                </ul>
+            </div>
+        </div>
+     </div>
+  
+    <div id="content-socials" class="content-section active-content"> <!--For socials webpage content -->
+         <h1>socials</h1>
+           <h2>emails</h2>
+             <h3>b2028empesquivel@pshs.edu.ph <br> b2028jspvillasfer@pshs.edu.ph</h3>
+           <h2>authors info</h2>
+       <h3>elisha marie p. esquivel - na08 b2028<br> joshua samuel p. villasfer - na27 b2028<br><br> section: 9-na <br> teacher: sir roy canseco </h3>
+     </div>  
+               
+    <div id="content-sources" class="content-section active-content"> <!--For sources webpage content -->
+         <h1>sources</h1>
+             <h3>Basic Tetris HTML and JavaScript game. (n.d.). Gist. https://gist.github.com/straker/3c98304f8a6a9174efd8292800891ea1 <br> Olawanle, J. (2024, November 7). JavaScript Refresh page – How to reload a page in JS. freeCodeCamp.org. https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/#:~:text=The%20simplest%20way%20to%20refresh,and%20loading%20the%20latest%20content <br>
+                 Popular quotes. (n.d.). https://www.goodreads.com/quotes <br> Thelin, R. (n.d.). JavaScript tutorial: Build Tetris with modern JavaScript. Educative. https://www.educative.io/blog/javascript-tutorial-build-tetris <br> W3Schools.com. (n.d.-c). https://www.w3schools.com/js/js_date_methods.asp#:~:text=The%20getDay()%20method%20returns,number%20(0%2D6) <br> W3Schools.com. (n.d.-d). https://www.w3schools.com/graphics/game_canvas.asp <br>
+                 W3Schools.com. (n.d.-e). https://www.w3schools.com/graphics/game_score.asp <br> W3Schools.com. (n.d.-f). https://www.w3schools.com/cssref/css_pr_rotate.php <br> W3Schools.com. (n.d.-g). https://www.w3schools.com/js/js_input_examples.asp <br> W3Schools.com. (n.d.-h). https://www.w3schools.com/jsref/dom_obj_text.asp <br> W3Schools.com. (n.d.-i). https://www.w3schools.com/js/js_date_methods.asp <br> W3Schools.com. (n.d.-j). https://www.w3schools.com/js/js_object_accessors.asp <br>
+                 W3Schools.com. (n.d.-k). https://www.w3schools.com/js/js_function_call.asp <br> W3Schools.com. (n.d.-l). https://www.w3schools.com/tags/tag_textarea.asp <br> W3Schools.com. (n.d.-n). https://www.w3schools.com/howto/howto_js_topnav.asp
+             </h3>
+     </div>
+  
+    <div id="content-copyright" class="content-section active-content"> <!--For copyright content -->
+         <h1>copyright</h1>
+             <p>
+               Copyright &copy
+                <span>
+                 Elisha Esquivel, 9-Sodium <br>
+               </span>
+             </p>
+             <p> 
+               Copyright &copy
+               <span>
+                 Joshua Villasfer, 9-Sodium
+               </span>
+             </p>
+   </div>
+   
+    <div class="bottom-navbar">
+         <span class="tab-link active" onclick="showContent('profile')">✹ profile</span>
+         <span class="separator"></span>
+         <span class="tab-link" onclick="showContent('log-in')">✹ log-in</span>
+         <span class="separator"></span>
+         <span class="tab-link" onclick="showContent('aaa')">✹ achievements and art</span>
+     </div>
+  
+    <div id="content-profile" class="content-section">
+      <div class="profile-container">
+          <div class="profile-header">
+                  <h1>PROFILE</h1>
+          </div>    
+          <div class="profile-content">
+              <div class="profile-image-container">
+                  <div class="image-upload-area">
+                      <div class="image-placeholder">+ Upload Image</div>
+                      <input type="file" id="profile-pic" accept="image/*" style="display: none;">
+                  </div>
+              </div>
+
+              <div class="profile-details">
+                  <table class="profile-table">
+                      <tr>
+                          <td class="label-cell">username:</td>
+                          <td><input type="text" class="table-input"></td>
+                      </tr>
+                      <tr>
+                          <td class="label-cell">name:</td>
+                          <td><input type="text" class="table-input"></td>
+                      </tr>
+                      <tr>
+                          <td class="label-cell">email:</td>
+                          <td><input type="email" class="table-input"></td>
+                      </tr>
+                      <tr>
+                          <td class="label-cell">birthday:</td>
+                          <td><input type="date" class="table-input"></td>
+                      </tr>
+                      <tr>
+                          <td class="label-cell">password:</td>
+                          <td><input type="password" class="table-input"></td>
+                      </tr>
+                  </table>
+
+                  <div class="profile-message">
+                      <p>this will save your personal data and achievements</p>
+                  </div>
+                <button class="confirm-btn">CONFIRM.</button>
+              <div class="profile-note">
+                 <p>artstyle is so different now HAHAHHAAH....</p>
+              </div>
+              </div>
+              <div class="profile-image">
+                <img src="https://cdn.glitch.global/2abe36f7-6599-4b29-92f9-78f63db6eb7c/Untitled366_20250509203631.webp?v=1746794981620" alt="Art" class="image">
+              </div> 
+          </div>
+       </div>
+    </div>
+  
+    <div id="content-log-in" class="content-section">
+       <div class="login-container">
+           <div class="login-form">
+             <h2>LOG-IN</h2>
+           <div class="form-group">
+             <label for="login-username">username:</label>
+             <input type="text" id="login-username" class="login-input">
+           </div>
+           <div class="form-group">
+             <label for="login-password">password:</label>
+             <input type="password" id="login-password" class="login-input">
+           </div>
+           <button class="login-button">CONFIRM.</button>
+         </div>
+       </div>
+    </div>
+
+    <div id="content-aaa" class="content-section">
+       <!-- Art Gallery Section -->
+       <div class="art-gallery-section">
+           <div class="content-header">
+               <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20icon.png?v=1734696446049" alt="Decorative Icon" class="header-icon">
+               <div>
+                   <h2>rewrite the stars.</h2>
+                   <p class="subtitle">do you wish to revisit past ephemeras that cannot be returned in the limelight? here lies the memorabilias of prose and poetry to be looked upon by the cadence of eyes once more.</p>
+                   <p class="subtitle">see past art and the previous lore together with extra art if you've gotten through 100 days or if you've collected all the achievements.</p>
+                   <div class="description">
+                       <p>art gallery. and achievements</p>
+                   </div>
+               </div>
+           </div>
+
+           <div class="gallery-container">
+               <div class="art-item">
+                   <div class="art-frame">
+                       <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20l1.jpg?v=1734710831171" alt="Art 1" class="gallery-image">
+                   </div>
+                   <p class="date-achieved">date achieved: december 1st, 2024</p>
+               </div>
+               <div class="art-item locked">
+                   <div class="art-frame">
+                       <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20l2.jpg?v=1734696461354" alt="Art 2" class="gallery-image">
+                       <div class="lock-overlay">
+                           <span>Unlock at 20 days</span>
+                       </div>
+                   </div>
+                   <p class="date-achieved">date achieved: pending</p>
+               </div>
+               <div class="art-item locked">
+                   <div class="art-frame">
+                       <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20l3.jpg?v=1734710822878" alt="Art 3" class="gallery-image">
+                       <div class="lock-overlay">
+                           <span>Unlock at 100 days</span>
+                       </div>
+                   </div>
+                   <p class="date-achieved">date achieved: pending</p>
+               </div>
+           </div>
+
+           <p class="lore-text">NOV. 23, 2024: introduced in the mystical world of comfort and kindness in the Eons, a little scrawny kitty never truly fit in. devilish,</p>
+       </div>
+
+       <!-- Achievements Section -->
+       <div class="achievements-section">
+           <div class="content-header">
+               <img src="https://cdn.glitch.global/a141060a-d4e4-465b-82a4-de139674d3a4/Copy%20of%20icon.png?v=1734696446049" alt="Decorative Icon" class="header-icon">
+               <div>
+                   <h2>achievements.</h2>
+                   <p class="subtitle">track your progress and earn special recognition for your dedication to Kanlungan.</p>
+                   <div class="description">
+                       <p>unlock achievements by meeting specific criteria</p>
+                   </div>
+               </div>
+           </div>
+
+           <div class="achievements-container">
+               <div class="top-row">
+                   <div class="achievement-tile small-tile" id="achievement-good-morning">
+                       <div class="achievement-number">1</div>
+                       <img src="https://cdn.glitch.global/c4c615fb-240a-4307-9628-0b0cb389b9b8/d377149b-f69c-403d-b6a5-468568586231.jpg?v=1747460167833" alt="Good Morning" class="achievement-image">
+                       <div class="achievement-details">
+                           <h3>Good Morning</h3>
+                           <p>Go through five days</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 0%"></div>
+                           </div>
+                           <p class="progress-text">0/5 days</p>
+                       </div>
+                   </div>
+
+                   <div class="achievement-tile small-tile" id="achievement-hello-neighbour">
+                       <div class="achievement-number">2</div>
+                       <img src="https://cdn.glitch.global/c4c615fb-240a-4307-9628-0b0cb389b9b8/1526d610-7265-4afd-ab51-8cde2bd3fe1a.jpg?v=1747460166371" alt="Hello Neighbour" class="achievement-image">
+                       <div class="achievement-details">
+                           <h3>Hello Neighbour</h3>
+                           <p>Go through twenty days</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 0%"></div>
+                           </div>
+                           <p class="progress-text">0/20 days</p>
+                       </div>
+                   </div>
+
+                   <div class="achievement-tile small-tile" id="achievement-write-a-lot">
+                       <div class="achievement-number">3</div>
+                       <img src="https://cdn.glitch.global/c4c615fb-240a-4307-9628-0b0cb389b9b8/76b69915-1da6-4676-9a62-816ed60b1eba.jpg?v=1747460163798" alt="Write-A-Lot" class="achievement-image">
+                       <div class="achievement-details">
+                           <h3>Write-A-Lot</h3>
+                           <p>Confess fifty post-its</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 0%"></div>
+                           </div>
+                           <p class="progress-text">0/50 post-its</p>
+                       </div>
+                   </div>
+
+                   <div class="achievement-tile small-tile" id="achievement-laro">
+                       <div class="achievement-number">4</div>
+                       <img src="https://cdn.glitch.global/c4c615fb-240a-4307-9628-0b0cb389b9b8/00ccef34-c9d2-41d1-b66b-7c6a64b18f52.jpg?v=1747460161354" alt="Laro" class="achievement-image">
+                       <div class="achievement-details">
+                           <h3>Laro</h3>
+                           <p>Get 50 points at tetris</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 0%"></div>
+                           </div>
+                           <p class="progress-text">0/50 points</p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="bottom-row">
+                   <div class="achievement-tile large-tile" id="achievement-loyal-partner">
+                       <div class="achievement-number">5</div>
+                       <img src="https://cdn.glitch.global/c4c615fb-240a-4307-9628-0b0cb389b9b8/39f04ba6-e32a-4997-aa8b-e8dc533d2a5f.jpg?v=1747460155857" alt="Loyal Partner" class="achievement-image">
+                       <div class="achievement-details">
+                           <h3>Loyal Partner</h3>
+                           <p>Go through one hundred days</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 0%"></div>
+                           </div>
+                           <p class="progress-text">0/100 days</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Image Modal for expanded view -->
+       <div id="imageModal" class="modal">
+           <span class="close-modal">&times;</span>
+           <img class="modal-content" id="expandedImage">
+       </div>
+    </div>
+</div>
+<script defer src="script.js"></script> <!--For js content -->
+</body>
+</html>
